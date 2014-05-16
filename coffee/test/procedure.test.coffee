@@ -1,4 +1,4 @@
-require('../lib/procedure')
+procedure = require('../lib/procedure')
 assert = require('assert')
 sinon = require('sinon')
 
@@ -22,11 +22,11 @@ describe 'procedure', ->
 			assert typeof next is 'function'
 			next() # call next but it must do nothing because there is no next procedure
 
-		[
+		procedure [
 			proc1
 			proc2
 			proc3
-		].procedure()
+		]
 
 		func = ->
 			assert proc1.calledOnce

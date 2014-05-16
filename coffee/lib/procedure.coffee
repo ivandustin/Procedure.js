@@ -1,6 +1,5 @@
-Array.prototype.procedure = () ->
+module.exports = (stack) ->
 	# initialize variables
-	stack = this
 	index = 0
 
 	# create next() function to be passed in the procedures
