@@ -3,9 +3,10 @@
 ## How to use
 
 ```javascript
-require('procedure');
+proc = require('procedure');
 
-[
+// run procedure stack
+proc([
 	function(next) {
 		setTimeout(function() {
 			next('hello world'); // run next procedure with passed args
@@ -20,5 +21,5 @@ require('procedure');
 	function(a, b, c) {
 		console.log(a, b, c) // outputs '1 2 3'
 	}
-].procedure(); // run this procedure stack
+]);
 ```
